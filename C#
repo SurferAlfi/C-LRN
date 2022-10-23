@@ -1,0 +1,118 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            Console.WriteLine("Hello World!");
+            Console.ReadLine(); 
+            */
+
+            //Névkiírás
+            /*
+            Console.WriteLine("Kérem a nevet: "); //Nevet kérsz
+            string name = Console.ReadLine(); //Beolvassa a Console
+            Console.WriteLine("Köszönöm {0}!", name); //Kiírja a Console
+            */
+
+            //Tájékoztatás, Adatbekérés
+            /*
+            Console.WriteLine("Helló, kérlek add meg a nevedet:");
+            string name = Console.ReadLine(); //Itt megáll, megvárja, amíg begépelsz valamit. Name nevű változóba menti, amit kapott.
+            Console.WriteLine("Kérlek add meg a születési dátumodat, a következő formában:");
+            Console.WriteLine("[ÉÉÉÉ.HH.NN]");
+            DateTime birth = DateTime.Parse(Console.ReadLine()); //Dátumot tárol. Parse: konzolról minden, amit beolvasunk, string érték lesz, amit dátummá kell alakítani.
+            Console.WriteLine("Köszönöm!");
+
+            double age = DateTime.Now.Subtract(birth).Days / 365.25; //Dátum kivonása. Mai nap: DateTime.Now, ebből a .Subtract(birth) művelet kivonja a szülinapi időpontot, és a .Days kiolvassa az azóta eltelt napok számát. Ha elosztod 365.25-tel, megkapod az eltelt évek számát.
+            Console.WriteLine(String.Format("Szia {0}, te {1} éves vagy.", name, (int)age)); //String.Format() metódus a legjobb, hogy szöveget kezelj. Leírod a szöveges közlendőt, majd kapcsos zárók közé mehet az argumentum. (int)age: Maradhatott volna csak age, de így eltűnik a tizedesveszző.
+            Console.ReadLine(); 
+            */
+
+            //ELÁGAZÁS
+            /*
+            if (true)
+            {
+                System.Console.WriteLine("Hello!"); //Elágazás akkor kell, mikor egy vagy több parancs futása feltételhez kötődik. Ez itt fixen lefut, mert az if után a feltétel értéke true. Ha false lenne nem futna le.
+            } 
+            */
+
+            /*
+            int x = int.Parse(Console.ReadLine()); // Beolvas egy stringet a consoleról, majd int számmá alakítja.  
+
+            if(x>0)
+            {
+                Console.WriteLine("Ez egy pozitív szám");
+            }
+            else //Különben blokk: Csak akkor fut le, ha a felette lévő if nem futott le. 
+            {
+                Console.WriteLine("Ez a szám nem pozitív");
+            }
+
+            Console.ReadLine();
+            */
+
+            //NEGÁLÁS (Egy logikai változó ellentéte. ! a változó neve elé.)
+            /*
+            bool isJoffreyKing = true;
+            bool isBaratheonKing = !isJoffreyKing;
+            */
+
+            //ÉS: && (Akkor ad vissza igaz értéket, ha minden operandusa igaz.)
+            /*
+            bool smellsDrunk = true;
+            bool movesUnsecure = true;
+            bool hasAGun = false;
+
+            bool risky = smellsDrunk && movesUnsecure;
+            bool dangerous = smellsDrunk && movesUnsecure && hasAGun;
+
+            if (risky)
+            {
+                KickOut();
+            }
+            if (dangerous)
+            {
+                CallPolice();
+            }
+            */
+
+            //Vagy || (Akkor ad vissza igaz értéket, ha valamely operandusa igaz.)
+            /*
+            bool suspicious = smellsDrunk || movesUnsecure || hasAGun;
+            */
+
+            //CIKLUSOK: Valamilyen utasítás vagy utasítások egy bizonoys feltételtől függően ismétlődnek.(Ellenőrzik a futási feltételt, ha az zöld utat ad, lefuttatják a ciklusmagbeli utasításokat.)
+            //1. Számláló Ciklus: for (addig futnak a magban az utasítások, számláló változó nagysága el nem éri a megadott határértéket.)
+            //Helyes for ciklusnak tartalmaznia kell:
+                //Iterációs változó: i úgynevezett számláló változó, deklarálás: (int i = 0) amivel ellenőrizheted, meddig fut a ciklus. 
+                //Futási feltétel: i < 10 amíg ennek a feltételnek az értéke igaz, addig futhatnak a ciklusmagban kiadott parancsok.
+                //Iterációs lépések: i++. Itt kell meghatározni azt, mennyivel növekedjen a ciklusváltozó egy-egy lépésben. Az i++ utasítás eggyel növel, az i-- eggyel csökkent.
+            /*
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Akkor is igazam van!"); //Ez 10x kiíratja
+            }
+            */
+
+            /*
+            for(int i = 0; i < 10; i+=2)
+            {
+                Console.WriteLine(i); //Páros számikat írja ki, 0 - 10 között.
+            }
+            */
+
+            //2. Elöltesztelő ciklus: while 
+
+
+        }
+    }
+}
