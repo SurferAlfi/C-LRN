@@ -116,3 +116,209 @@ namespace ConsoleApp1
         }
     }
 }
+
+- - - - - - - - - - - - - - 
+
+namespace Suli
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Név Plz");
+            string nev = Console.ReadLine();
+            Console.WriteLine("Szoszi, {0}", nev);
+            
+        }
+    }
+}
+            - - -
+            int hossz = 45;
+            Console.Write("A négyzet kerülete: ");
+            Console.WriteLine(4 * hossz);
+            Console.WriteLine("A {0} oldalú négyzet területe {1}", hossz, hossz * hossz); 
+            - - - 
+            
+            - - -
+            int szülév = 1994;
+            Console.WriteLine("{0}-ban/ben születtem.\n Most {1} éves vagyok.", szülév, 2022 - szülév);
+            - - -
+            
+            - - -
+            int r;
+            string sugar;
+            Console.WriteLine("Adja meg  akör sugarát: ");
+            sugar = Console.ReadLine();
+            r = int.Parse(sugar); //Számmá váltja
+            Console.WriteLine("A/Az {0} sugarú kör kerülete: {1}", r, 2 * r * 3.14);
+            Console.WriteLine("A/Az {0} sugarú kör területe: {1}", r, r * r * 3.14);
+            - - - 
+            
+            - - - 
+            int szülév;
+            int dátum;
+            string segéd;
+            Console.WriteLine("Adja meg a születési évet");
+            segéd = Console.ReadLine();
+            szülév = int.Parse(segéd);
+            Console.WriteLine("Adja meg az aktuális évszámot");
+            segéd = Console.ReadLine();
+            dátum = int.Parse(segéd);
+            Console.WriteLine("Aki {0}-ban született, most {1} éves.", szülév, dátum - szülév);
+            - - -
+            
+            - - -
+            // TÉGLALAP
+            int aoldal, boldal;
+            Console.WriteLine("Adja meg a téglalap A oldalát!");
+            aoldal = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Adja meg a téglalap B oldalát!");
+            boldal = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("A(z) {0} és {1} oldalú téglalap Kerülete: {2}. Területe: {3}", aoldal, boldal, 2 * (aoldal + boldal), aoldal * boldal);
+            - - - 
+          
+            - - -
+            // HÁROMSZÖG Kerület
+            int aoldal, boldal, coldal;
+            Console.WriteLine("Első oldal");
+            aoldal = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Második oldal");
+            boldal = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Harmadik oldal");
+            coldal = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("A {0} és {1} és {2} oldalú háromszög Kerülete: {3}", aoldal, boldal, coldal, aoldal + boldal + coldal);
+            - - - 
+            
+            - - -
+            // MAGASSÁG (if else)
+            int magasság;
+            Console.WriteLine("Adja meg a magasságát!");
+            magasság = Convert.ToInt32(Console.ReadLine());
+            if (magasság >= 180)
+            {
+                Console.WriteLine("Magas vagy.");
+            }
+            else
+            {
+                Console.WriteLine("Alacsony vagy.");
+            }
+            
+            // VAGY...
+            
+            int magasság;
+            string segéd;
+            Console.WriteLine("Kérem adja meg magasságát!");
+            segéd = Console.ReadLine();
+            magasság = int.Parse(segéd);
+            if (magasság >= 180)
+            {
+                Console.WriteLine("Magas vagy");
+            }
+            else
+            {
+                Console.WriteLine("Alacsony vagy");
+            }
+            - - -
+            
+            - - -
+            //Háromszög három oldalának bekérése, háromszögegyenlőtlenség ellenőrzése
+
+            double a, b, c;
+            Console.WriteLine("Adja meg a háromszög egyik oldalát: ");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Adja meg a háromszög második oldalát: ");
+            b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Adja meg a háromszög harmadik oldalát: ");
+            c = Convert.ToDouble(Console.ReadLine());
+            if (a + b > c && a + c > b && b + c > a)
+            {
+                Console.WriteLine("A háromszög megszerkeszthető. Kerülete: {0}", a + b + c);
+            }
+            else
+            {
+                Console.WriteLine("A hsz. nem megszerkeszthető.");
+            }
+            - - - 
+            
+            - - - 
+            string nev;
+            int szülév, most;
+            Console.WriteLine("Adja meg a nevét!");
+            nev = Console.ReadLine();
+            Console.WriteLine("Adja meg a születési évet!");
+            szülév = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Adja meg a jelen évet!");
+            most = Convert.ToInt32(Console.ReadLine());
+            if (most - szülév > 30)
+            {
+                Console.Write(nev);
+                Console.WriteLine("Old");
+            }
+            else
+            {
+                Console.Write(nev);
+                Console.WriteLine("Young");
+            }
+            - - -
+            
+            - - - 
+            // matek jegy bekérése és ahozzá tartozó szöveges értékelés kiíratása if-else -k egymásba ágyazása, ill. switc -case
+
+            int jegy;
+            Console.WriteLine("Kérem a jegyet: ");
+            jegy = Convert.ToInt32(Console.ReadLine());
+            if (jegy == 1)
+            {
+                Console.WriteLine("Elégtelen");
+            }
+            else if (jegy == 2)
+            {
+                Console.WriteLine("Elégésges");
+            }
+            else if (jegy == 3)
+            {
+                Console.WriteLine("Közepes");
+            }
+            else if (jegy == 4)
+            {
+                Console.WriteLine("Jó");
+            }
+            else if (jegy == 5)
+            {
+                Console.WriteLine("Jeles");
+            }
+            
+            //VAGY...
+            
+            int jegy;
+            Console.WriteLine("Adja meg a jegyét!");
+            jegy = Convert.ToInt32(Console.ReadLine());
+            switch (jegy)
+            {
+                case 1: Console.WriteLine("elégtelen"); break;
+                case 2: Console.WriteLine("elégséges"); break;
+                case 3: Console.WriteLine("közepes"); break;
+                case 4: Console.WriteLine("yo"); break;
+                case 5: Console.WriteLine("fasza"); break;
+                default: Console.WriteLine("Nincs ilyen jegy"); break;
+            }
+            - - -
+            
+            - - -
+            int i = 0;
+            while (i < 10)
+            {
+                Console.WriteLine("Kata"); //10x leírja, hogy Kata
+                i++;
+            }
+            - - - 
+            
+            - - -
+             int i = 1;
+            do
+            {
+                Console.WriteLine("KATA"); //10x kiírja, hogy Kata
+                i++;
+            }
+            while (i < 10);
+            - - -
